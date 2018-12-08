@@ -1,0 +1,2 @@
+C:\Users\Usuario\Desktop\Pasta da Dri-hime\Academia\ProjetoAdsAcademia2018\obj\x86\Debug\ToFarm.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Pasta da Dri-hime\Academia\ProjetoAdsAcademia2018\obj\x86\Debug\ToFarm.csproj.CoreCompileInputs.cache

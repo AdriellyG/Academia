@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Paginas_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body {
+            font-family: Arial;
+        }
+        :root {
+            --widthCelula: 33%;
+        }
+
+        table {
+            border: none !important;
+        }
+
+        tbody tr {
+            //border:1px solid #333;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            float: left;
+        }
+
+            tbody tr td {
+                padding: 10px !important;
+                text-align: center;
+                border: none;
+                width: var(--widthCelula);
+                float: left;
+            }
+
+            tbody tr th {
+                padding: 10px !important;
+                text-align: center;
+                border: none;
+                width: var(--widthCelula);
+                float: left;
+            }
+
+        /*/* td{
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }*/
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 30px;
+        }
+    </style>
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertAcademia.aspx">Academia <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertPessoa.aspx">Pessoa <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertUsu.aspx">Usuário <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertPerfil.aspx">Perfil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertCliente.aspx">Cliente<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertEndereco.aspx">Endereço <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertServico.aspx">Serviço <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="insertMensalidade.aspx">Mensalidade <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="DeleteUpdateUsuario.aspx">Atualizar usuário <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="DeleteUpdate_Endereco.aspx">Atualizar endereço <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>                
+            </div>
+            <asp:label ID="lblUsuarioNome" cssclass="col-md-1" runat="server"></asp:label>
+            <asp:LinkButton ID="btnSair" runat="server" CssClass="col-md-2 btn btn-dark" Visible="false" OnClick="btnSair_Click">Sair</asp:LinkButton>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <script src="../Scripts/jquery-3.0.0.min.js"></script>
+        <script src="../Scripts/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
